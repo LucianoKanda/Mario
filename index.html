@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- !DOCTYPE html (é uma coordenada, nesta linha de código estou avisando que esta é uma versão de HTML mais moderna) -->
+<html lang="pt-br"> <!-- lang="" (é a lingua do site) -->
+
+<head>
+    <meta charset="UTF-8"> <!-- meta (essa TAG em específico serve para que o site funcione bem em diferentes tamanhos de tela, como smartphones, tablets e computadores)
+    charset="" (é o padrão de caracteres do site) obs: cada país tem um padrão de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- name="viewport" (diz que o metadado é a área visível da página no navegador do usuário)
+    content="" (define as configuraçoes da viewport); width=device-width (Define que a largura da viewport deve ser igual à largura da tela do dispositivo); initial-scale=1.0 (Define o nível de zoom inicial da página, 1.0 significa 100%) -->
+    <link rel="stylesheet" href="style.css">
+    <!-- link (é a TAG para importar recursos externos) 
+    rel="" (Esse atributo diz qual é o tipo de relação entre o HTML e o recurso externo)
+    href="" (Esse é o caminho para o arquivo); style.css (indica que o arquivo está na mesma pasta que o arquivo HTML -->
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="./img/logo-header.png" alt="logo mario">
+        <a>Home</a>
+        <a href="nossos-servicos.html">Nossos Serviços</a>
+        <a onclick="mostrarForm()">Fale Conosco</a>
+    </div>
+
+    <div class="caixa-mae">
+
+        <div class="caixa-principal">
+            <!-- div (Funciona como uma caixa, nela voce pode organizar os elementos) obs: a div possui uma tag de fechamento -->
+            <img src="./img/logo.png" alt="logo do mario bros" class="logo-mario">
+            <!-- src="./" (é usado para saber a origem da imagem a imagem, src é a abreviação de source)
+    alt="" (texto alternativo, serve para cado de erro de carregamento da imagem ou para que deficientes visuais saibam que é uma imagem)
+    class="" (serve para definir um apelido para a tag aberta, neste caso estou dizendo que a "img" vai fazer parte da classe "logo-mario") obs: não é possivel ter espaço dentro da class -->
+            <p class="paragrafo-1">Encanadores Mario & Luigi - Resolvendo seus problemas com Estilo. </p>
+            <p class="paragrafo-2">Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos
+                entupidos
+                ou
+                torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia! Apresentamos
+                a
+                vocês
+                os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!</p>
+
+            <button onclick="mostrarForm()">Entre em contato</button>
+
+        </div>
+
+        <div>
+            <img src="./img/mario.png" alt="imagem mario e Luigi" class="imagem-mario-luigi">
+        </div>
+    </div>
+
+    <div class="caixa-video">
+        <video src="./img/video.mp4" autoplay muted loop> </video> <!-- autoplay (Da play no video automaticamente),
+        muted (inicia o video mutado), loop (cria um loop infinito no video)-->
+        <div class="mascara"></div>
+        <!-- Essa div foi criada apenas para aplicarmos uma camada no video, pra ficar como efeito -->
+    </div>
+
+    <a href="https://wa.me/5518991692090?text=Ol%C3%A1%2C%20estive%20olhando%20um%20de%20seus%20sites%2C%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento."
+        class="link-whatsapp">
+        <img src="./img/whatsapp.png" alt="Link para whatsapp">
+    </a>
+
+    <form 
+    class="formulario-fale-conosco"
+    action="https://formcarry.com/s/Yuksy24LE2x"
+    method="POST"
+    enctype="multipart/form-data">
+        <input placeholder="Seu nome" type="text" name="nome">
+        <input placeholder="Seu telefone" type="tel" name="telefone">
+        <input placeholder="Seu melhor email" type="email" name="email">
+        <textarea placeholder="Digite seu problema aqui" name="problema"></textarea>
+        <button type="submit">Pedir Orçamento</button>
+    </form>
+
+    <div class="mascara-formulario" onclick="esconderForm()"></div>
+
+</body>
+
+<script src="scripts.js"></script> <!-- TAG para Linkar ou Chamar o arqivo javascript-->
+
+</html>
