@@ -1,20 +1,10 @@
-/* Comentario muito importante esta primeira linha de comando tem que ser aplicada em todo site que fizer, porque?:
-    o Asterisco (*) Significa "TUDO" então toda configuração aqui surtira efeito em todo o site,
-    Por padrão aplicamos estas configurações para resetar as configurações ja aplicadas no navegador, pois cada navegador vem um predefinições diferentes */
 * {
     margin: 0;
-    /* Obs: zerando os valores da margem*/
     padding: 0;
-    /* Obs: zerando todo o espaçamento interno*/
     box-sizing: border-box;
-    /* Faz com que a largura e altura dos elementos incluam o padding e a borda, evitando cálculos complexos e melhorando o controle do layout */
-    /* Por padrão todos os sites sempre virão com estas 3 configurações (margin:width: 0; - paddin:width: 0; - box-sizing:border-box; e sempre no começo do código,
-    pois como o CSS usa as configurações em ordem de linha de comando, aquelas que vem embaixo sobreescrevem as que ficam em cima, fazendo com que as ultimas sempre prevaleçam*/
 }
 
 .logo-mario {
-    /* estou abrindo as configurações da classe logo-mario */
-    /* em baixo estou aplicando as configurações a classe */
     height: 200px;
 }
 
@@ -28,32 +18,25 @@ p {
 }
 
 button {
-    /* estou abrindo as configurações do botão */
     color: white;
-    /* Existem duas maneiras de selecionar uma cor, escrevendo o nome dela como mostrado aqui nesta linha de código ou
-    utilizando o código como mostrado abaixo, é possivel alterar a cor clicando no quadradinho ao lado delas */
     background-color: #C51111;
     border-radius: 3px;
     border: none;
     width: 200px;
     height: 50px;
     cursor: pointer;
-    /* serve para mudar o cursor para mãozinha quando estiver em cima do botão  */
     text-transform: uppercase;
-    /* serve para deixar as letras maiusculas, mesmo que estejam minusculas no HTML */
     font-weight: bold;
     margin-top: 30px;
 }
 
 button:hover {
-    /* hover é a aplicação de determinado evento qualdo passado o mouse em cima do elemento selecionado, nesse caso o button: */
     color: white;
     font-size: 15px;
     transition: 0.5s ease-in-out;
 }
 
 .link-whatsapp img {
-    /* Por que a TAG img esta depois da classe? Ela esta especificamente depois para que as configurações a seguir sejam aplicadas diretamente na imagem e não na TAG classe que esta logo depois do link no HTML (Neste caso estou dizendo para que seja procurado a TAG img dentro da CLASSE .link-whatsapp) */
     height: 60px;
     position: fixed;
     right: 20px;
@@ -62,22 +45,13 @@ button:hover {
 
 body {
     height: 100vh;
-    /* height: 100vh; (Define que o body deve ocupar 100% da altura da janela de visualização)
-    o vh significa "viewport height" (então 100vh é exatamente a altura visível da tela) */
 }
 
 .caixa-mae {
-    /* Aqui estou abrindo as configurações a "caixa-mae" e aplicando em baixo */
     display: flex;
-    /* display:flex; habilita varias funções por exemplo: (align-items: & justify-content:), mas de cara por padrão ela ja coloca um item ao lado do outro */
     align-items: center;
-    /*align-items: é o alinhamento dos itens na vertical*/
     justify-content: space-around;
-    /* justify-content: é o alinhamento dos itens na horizontal,
-    o valor space-around serve para Colocar espaço em volta de cada elemento: antes, entre e depois*/
     padding: 100px;
-    /* padding: (Espaçamento interno), que é o contrario de margin:"" (espaçamento externo),
-    100px esta adicionando 100 pixels em todos os lados: topo, direita, baixo e esquerda*/
     height: 100vh;
 }
 
@@ -87,36 +61,27 @@ body {
 
 .caixa-video {
     position: fixed;
-    /* define o posicionamento para fixo */
     top: 0;
-    /* força o elemento sempre a ficar no topo da pagina */
     z-index: -1;
-    /* z-index: é o posicionamento do eixo Z, -1 manda para tras e 1 para frente */
 
 }
 
 video {
     min-height: 100%;
-    /* define uma altura minima permanente */
     min-width: 100%;
-    /* define uma largura minima permanente */
     position: fixed;
     top: 0;
 }
 
 .mascara {
-    /* aqui aplicamos estas linhas de comando para que a div possa estar visivel como forma de efeito em cima do video */
     height: 100%;
     width: 100%;
     background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
-    /* Onde encontrar este código maluco?: 
-    No site https://cssgradient.io/ ou ( digite CSS Gradiente no navegador) */
     position: fixed;
     top: 0;
 }
 
 .header {
-    /* Aplicamos as configurações ao cabeçalho*/
     display: flex;
     align-items: center;
     gap: 30px;
@@ -124,17 +89,14 @@ video {
 }
 
 .header img {
-    /* Aplicamos as configurações a imagem do cabeçalho*/
     height: 60px;
 }
 
 .header a {
-    /* Aplicamos as configurações aos links do cabeçalho*/
     color: white;
     cursor: pointer;
     font-size: 24px;
     text-decoration: none;
-    /* Comando para remover o tracinho embaixo de links no site */
 }
 
 .header a:hover {
@@ -147,7 +109,6 @@ video {
     background-color: white;
     display: flex;
     gap: 20px;
-    /* gap: só posso utilizar com "display: flex;" habilitado*/
     flex-direction: column;
     position: fixed;
     left: -300px;
@@ -233,8 +194,6 @@ textarea {
 
 @media(max-width: 1110px) {
 
-    /* @media habilita a responsividade do navegador conforme vista em varios dispositivos,
-max-width Quando o valor for menor que o numero de pixels, aplica o CSS do @media e min-width quando o valor dor maior que o numero de pixels aplica o CSS do @media */
 
     .caixa-mae {
         flex-direction: column;
@@ -283,7 +242,7 @@ max-width Quando o valor for menor que o numero de pixels, aplica o CSS do @medi
 
     .caixa-mae-nossos-servicos {
         flex-direction: column;
-        justify-content: right;   
+        justify-content: right;
     }
 
     .caixa-principal-nossos-servicos {
